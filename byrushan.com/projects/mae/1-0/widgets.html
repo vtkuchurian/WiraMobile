@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+
+<!-- Mirrored from byrushan.com/projects/mae/1-0/widgets.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 09 Jul 2016 10:23:23 GMT -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Material Admin</title>
+
+<!-- Vendor CSS -->
+<link
+	href="vendors/bower_components/fullcalendar/dist/fullcalendar.min.css"
+	rel="stylesheet">
+<link href="vendors/bower_components/animate.css/animate.min.css"
+	rel="stylesheet">
+<link
+	href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css"
+	rel="stylesheet">
+<link
+	href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css"
+	rel="stylesheet">
+<link
+	href="vendors/bower_components/google-material-color/dist/palette.css"
+	rel="stylesheet">
+
+<!-- CSS -->
+<link href="css/app.min.1.css" rel="stylesheet">
+<link href="css/app.min.2.css" rel="stylesheet">
+
+<style>
+body:before {
+	height: 70px;
+}
+
+.icon-attach {
+	-ms-transform: rotate(7deg);
+	-webkit-transform: rotate(7deg);
+	transform: rotate(-47deg);
+}
+
+.clear-back-button, .clear-back-button:hover {
+	background-color: transparent !important;
+	color: #fff !important;
+	box-shadow: none;
+}
+</style>
+</head>
+
+<body data-ma-header="teal">
+	<header id="header" class="media p-5 p-t-15  m-b-10">
+		<div class="pull-left h-logo">
+			<div class="row">
+				<div class="col-xs-2">
+					<a href="index.html">
+						<button
+							class="btn btn-default btn-icon waves-effect waves-circle waves-float btn-link clear-back-button">
+							<i class="zmdi zmdi-arrow-left"></i>
+						</button>
+					</a>
+				</div>
+				<div class="col-xs-10">
+					<div class="c-header p-t-10  p-l-5">
+						<h2>Per DM Claim</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<ul class="pull-right h-menu m-b-0">
+			<li class="hm-alerts m-t-0" data-user-alert="sua-messages"
+				data-ma-action="sidebar-open" data-ma-target="user-alerts"></li>
+
+			<li class="dropdown hm-profile m-t-5"><a href="#"
+				data-toggle="dropdown"><i
+					class="hm-icon zmdi zmdi-attachment-alt f-20 icon-attach"></i></a>
+				<ul class="dropdown-menu pull-right dm-icon">
+					<li><a href="profile-about.html"><i
+							class="zmdi zmdi-camera"></i> Take Photo</a></li>
+					<li><a href="#"><i class="zmdi zmdi-collection-image"></i>
+							Gallery</a></li>
+					<li><a href="#"><i class="zmdi zmdi-file"></i> Document</a></li>
+				</ul></li>
+		</ul>
+
+		<div class="media-body h-search">
+			<form class="p-relative">
+				<input type="text" class="hs-input"
+					placeholder="Search for people, files &amp; reports"> <i
+					class="zmdi zmdi-search hs-reset" data-ma-action="search-clear"></i>
+			</form>
+		</div>
+	</header>
+
+	<section id="main">
+		<section id="content">
+			<div class="container">
+				<div id="c-grid" class="clearfix" data-columns>
+
+
+					<!-- Form -->
+					<div class="card">
+
+						<div class="card-body card-padding">
+							<div class="form-group fg-float m-b-30">
+								<div class="fg-line">
+									<input type="email" class="form-control input-sm"> <label
+										class="fg-label">Purpose</label>
+								</div>
+							</div>
+
+							<div class="form-group fg-float m-b-30">
+								<div class="fg-line">
+									<input type="email" class="form-control input-sm"> <label
+										class="fg-label">Department</label>
+								</div>
+							</div>
+
+							<div class="form-group fg-float m-b-30">
+								<div class="fg-line">
+									<input type="email" class="form-control input-sm"> <label
+										class="fg-label">Number of Days</label>
+								</div>
+							</div>
+
+							<div class="form-group fg-float">
+								<div class="fg-line">
+									<textarea class="form-control auto-size input-sm"></textarea>
+									<label class="fg-label">Amount Per Day</label>
+								</div>
+							</div>
+
+							<div class="form-group fg-float">
+								<div class="fg-line">
+									<textarea class="form-control auto-size input-sm"></textarea>
+									<label class="fg-label">Total</label>
+								</div>
+							</div>
+
+							<div class="form-group fg-float">
+								<div class="fg-line">
+									<textarea class="form-control auto-size input-sm"></textarea>
+									<label class="fg-label">Available Budget</label>
+								</div>
+							</div>
+
+							<div class="clearfix"></div>
+
+							<div class="m-t-20">
+								<button
+									class="btn btn-success btn-icon-text waves-effect btn-block btn-lg">
+									<i class="zmdi zmdi-check"></i> Submit
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</section>
+
+	<!-- Page Loader -->
+	<div class="page-loader palette-Teal bg">
+		<div class="preloader pl-xl pls-white">
+			<svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg>
+		</div>
+	</div>
+
+	<!-- Older IE warning message -->
+	<!--[if lt IE 9]>
+            <div class="ie-warning">
+                <h1 class="c-white">Warning!!</h1>
+                <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+                <div class="iew-container">
+                    <ul class="iew-download">
+                        <li>
+                            <a href="http://www.google.com/chrome/">
+                                <img src="img/browsers/chrome.png" alt="">
+                                <div>Chrome</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.mozilla.org/en-US/firefox/new/">
+                                <img src="img/browsers/firefox.png" alt="">
+                                <div>Firefox</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.opera.com">
+                                <img src="img/browsers/opera.png" alt="">
+                                <div>Opera</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.apple.com/safari/">
+                                <img src="img/browsers/safari.png" alt="">
+                                <div>Safari</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                                <img src="img/browsers/ie.png" alt="">
+                                <div>IE (New)</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <p>Sorry for the inconvenience!</p>
+            </div>   
+        <![endif]-->
+
+
+	<!-- Javascript Libraries -->
+	<script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
+	<script
+		src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+	<script
+		src="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="vendors/bower_components/Waves/dist/waves.min.js"></script>
+	<script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+
+	<script src="vendors/bower_components/flot/jquery.flot.js"></script>
+	<script src="vendors/bower_components/flot/jquery.flot.resize.js"></script>
+	<script src="vendors/bower_components/flot.curvedlines/curvedLines.js"></script>
+	<script src="vendors/sparklines/jquery.sparkline.min.js"></script>
+
+	<script src="vendors/bower_components/moment/min/moment.min.js"></script>
+	<script
+		src="vendors/bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+	<script
+		src="vendors/bower_components/simpleWeather/jquery.simpleWeather.min.js"></script>
+	<script
+		src="vendors/bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+	<script src="vendors/bower_components/autosize/dist/autosize.min.js"></script>
+	<script
+		src="vendors/bower_components/salvattore/dist/salvattore.min.js"></script>
+
+	<!-- Placeholder for IE9 -->
+	<!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+	<script src="js/flot-charts/curved-line-chart.js"></script>
+	<script src="js/flot-charts/bar-chart.js"></script>
+	<script src="js/charts.js"></script>
+
+	<script src="js/functions.js"></script>
+	<script src="js/actions.js"></script>
+	<script src="js/demo.js"></script>
+</body>
+
+<!-- Mirrored from byrushan.com/projects/mae/1-0/widgets.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 09 Jul 2016 10:25:00 GMT -->
+</html>
